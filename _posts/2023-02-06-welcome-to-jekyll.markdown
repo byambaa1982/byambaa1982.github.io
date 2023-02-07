@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Nostalgic Memories of a Simpler Life: Growing up in Mongolia
+title:  "Nostalgic Memories of a Simpler Life: Growing up in Mongolia"
 date:   2023-01-06 21:07:50 -0600
 categories: memory
 ---
