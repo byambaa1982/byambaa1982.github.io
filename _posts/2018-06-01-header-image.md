@@ -1,6 +1,6 @@
 ---
 title: From Novice to Pro
-tags: TeXt
+tags: Technology
 article_header:
   type: cover
   image:
