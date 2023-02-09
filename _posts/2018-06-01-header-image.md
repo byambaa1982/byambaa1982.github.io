@@ -1,10 +1,6 @@
 ---
 title: From Novice to Pro
 tags: Technology
-article_header:
-  type: cover
-  image:
-    src: /screenshot.jpg
 ---
 
 My Journey Learning Python and Finding a Better Job
