@@ -1,5 +1,5 @@
 ---
-title: Post with Header Image
+title: From Novice to Pro
 tags: TeXt
 article_header:
   type: cover
@@ -7,10 +7,16 @@ article_header:
     src: /screenshot.jpg
 ---
 
-A Post with Header Image, See [Page layout](https://kitian616.github.io/jekyll-TeXt-theme/samples.html#page-layout) for more examples.
+My Journey Learning Python and Finding a Better Job
 
-<!--more-->
-That fateful day I met Selengue, now known fondly as "Tso Teacher" by her students, will forever be ingrained in my memory. As a young and nervous teacher starting my first day at school, I was eager to meet the new addition to our faculty. The other teachers were buzzing with excitement about Selengue and I couldn't wait to introduce myself. The moment I met her, I was struck by her warm smile and sparkling eyes. Little did I know, this chance encounter would start a journey that would change my life forever.
-A few days later, the school principal invited all teachers to his new home for an ice-breaking party. Unfortunately, I was unable to attend, but fate intervened when the principal later invited Selengue and me to a private gathering on September 3rd, 2003. That day, Selengue shared her incredible story of perseverance and determination, growing up in a country undergoing political and economic turmoil. Despite the lack of resources, she was relentless in her pursuit of knowledge, driven by a passion to learn and connect with the world beyond her country's borders. Her story touched me deeply and inspired me to pursue my own dreams.
-With Selengue's support and encouragement, I decided to learn English, a challenge for a physics teacher like myself. Her unwavering support saw me through the struggles of learning a new language, and my hard work paid off when I was selected for the prestigious Japanese Government Scholarship. In 2009, I traveled to Japan to study physics at Miyagi University of Education in Sendai, a once-in-a-lifetime opportunity that would not have been possible without Selengue's support.
-In addition to her unwavering support and encouragement, Selengue was also a truly unique and fascinating person. She had a passion for coffee and could often be found enjoying a cup, savoring its rich flavor. She was also a proud pet owner of a white dog named Tsoonoo, who brought her joy and companionship. Beyond her love for coffee and her furry friend, Selengue was also an athletic woman, who excelled in sports like basketball and volleyball. She was always up for a good challenge and her competitive spirit only added to her charm and zest for life. Her combination of intelligence, determination, and infectious personality made her one of the most well-loved teachers at the school, and her students adored her for her kindness and infectious enthusiasm for learning. She truly left a lasting impact on everyone she met and I feel so grateful to have had the chance to cross paths with her.
+A few years ago, I made a decision that would change my life forever. I decided to learn Python, a popular and powerful programming language. At the time, I had no prior experience with coding, but I was determined to master it.
+
+The journey was not easy, but I was determined to succeed. I spent countless hours reading books, watching online tutorials, and practicing my coding skills. I also took advantage of online communities, where I could ask questions and receive helpful feedback from experienced programmers.
+
+Along the way, I started taking on freelance projects, which gave me invaluable real-world experience. I was able to work on a variety of projects, from simple scripts to complex web applications. This not only helped me improve my skills but also gave me the confidence to take on more challenging projects.
+
+Finally, after years of hard work and dedication, I found the job of my dreams. A company was looking for a Python developer, and I was the perfect fit. I was thrilled to have the opportunity to use my skills and knowledge to make a difference in the industry.
+
+Looking back, I can say that my decision to learn Python was one of the best I've ever made. It opened up a world of opportunities for me, both in my personal and professional life. I'm grateful for the experiences I've had and the friends I've made along the way.
+
+If you're thinking about learning Python, I would highly recommend it. Whether you're a beginner or an experienced programmer, there's always room to grow and improve. With the right resources and a determination to succeed, you too can make your dreams a reality.
