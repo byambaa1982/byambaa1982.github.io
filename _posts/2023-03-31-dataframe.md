@@ -127,6 +127,7 @@ Nulls for gender: 1
 ```
 The nullCheck function is similar to the printNullCount function, but instead of printing the results, it returns a Boolean value indicating whether any null values were found in the specified columns.
 
+## Conclusion
 
 Pyspark provides a wide range of functions and tools to manipulate large datasets efficiently. In this blog post, we explored some common functions in Pyspark that can be used to clean, transform, and analyze data in a DataFrame. We demonstrated how to use the changeDataType function to change the data type of a column, the getDifferences function to subtract one DataFrame from another based on specified join columns, and the printNullCount and nullCheck functions to check for null values in specified columns. These functions are just a few examples of the many functions available in Pyspark that can help you manipulate data effectively. With the power of Pyspark, you can handle large datasets with ease and gain valuable insights into your data.
 
