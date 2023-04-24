@@ -15,12 +15,12 @@ Additionally, Python's popularity has grown significantly, making it a highly so
 ## 2. Python Fundamentals
 Python's syntax is designed for simplicity and readability. This makes it easy for beginners to pick up the language and quickly start writing code. Here are some essential Python concepts that every developer should know:
 
-Conditional statements (if, else): These statements allow developers to control program flow based on specific conditions.
-for loops: These loops enable developers to iterate through elements of data structures like lists and strings.
-in keyword: This keyword allows developers to check for the presence of an element in a list or substring in a string.
-len() function: This built-in Python function returns the number of items in a list or characters in a string.
-enumerate() function: This built-in Python function allows developers to iterate through a list or string while simultaneously accessing both the element's index and its value.
-List indexing: This fundamental concept allows developers to access individual elements in a list or characters in a string using their positions.
+- Conditional statements (if, else): These statements allow developers to control program flow based on specific conditions.
+- for loops: These loops enable developers to iterate through elements of data structures like lists and strings.
+- in keyword: This keyword allows developers to check for the presence of an element in a list or substring in a string.
+- len() function: This built-in Python function returns the number of items in a list or characters in a string.
+- enumerate() function: This built-in Python function allows developers to iterate through a list or string while simultaneously accessing both the element's index and its value.
+- List indexing: This fundamental concept allows developers to access individual elements in a list or characters in a string using their positions.
 Here's an example demonstrating some of these concepts:
 
 ```python
