@@ -7,6 +7,9 @@ tag: Education
 
 Python is a powerful, versatile programming language that has become increasingly popular over the years. Its simple syntax and readability make it an excellent choice for beginners, while its extensive libraries and frameworks ensure it's equally appealing to experienced developers. In this blog post, we'll explore the fundamentals of Python and show you how to get started with some practical examples. We'll also discuss why learning Python today is more important than ever and provide a valuable resource for further learning.
 
+![alt text](/images/robot_woman.png "robot women")
+
+
 ## 1. The Power of Python
 Python is widely used in various industries, including web development, data analysis, artificial intelligence, and more. This versatility is due to its extensive ecosystem of libraries and frameworks, which allows developers to quickly and easily build a wide range of applications.
 
