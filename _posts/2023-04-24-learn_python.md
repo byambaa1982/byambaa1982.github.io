@@ -1,5 +1,5 @@
 ---
-title:Learning Python Today - Why It's More Important Than Ever
+title: Why It's More Important Than Ever
 tag: Education
 ---
 
