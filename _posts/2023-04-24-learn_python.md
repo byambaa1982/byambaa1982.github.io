@@ -43,8 +43,8 @@ print(f"Total number of languages: {len(languages)}")
 ```
 
 ## 3. Get Started with Python Today
-If you're interested in learning Python, now is the perfect time to start. There are numerous resources available to help you master the language, including our open-source GitHub repository, Python Courses for Beginners. This repository contains a wealth of information, including exercises and examples that cover the fundamental concepts discussed in this blog post.
+If you're interested in learning Python, now is the perfect time to start. There are numerous resources available to help you master the language, including our open-source GitHub repository, [Python Courses for Beginners](https://github.com/byambaa1982/python_cources_for_beginers). This repository contains a wealth of information, including exercises and examples that cover the fundamental concepts discussed in this blog post.
 
 ## Conclusion:
 
-Python's versatility, ease of use, and growing popularity make it an excellent choice for anyone looking to learn a new programming language. By starting today, you'll be well on your way to building a strong foundation in Python and opening up new opportunities in your career. So why wait? Check out our Python Courses for Beginners repository and start learning Python today!
+Python's versatility, ease of use, and growing popularity make it an excellent choice for anyone looking to learn a new programming language. By starting today, you'll be well on your way to building a strong foundation in Python and opening up new opportunities in your career. So why wait? Check out our [Python Courses for Beginners](https://github.com/byambaa1982/python_cources_for_beginers) repository and start learning Python today!
