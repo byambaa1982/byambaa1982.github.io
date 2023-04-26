@@ -9,7 +9,6 @@ Python is a powerful, versatile programming language that has become increasingl
 
 ![TeXt Theme](https://storage.googleapis.com/twittersheet-275317/cdc_dataset_de_interview/AnastasiaR_artificial_intelligence_mind_unisex_against_the_blac_e72fb188-03e5-4301-9647-62712157f098.png)
 
-
 ## 1. The Power of Python
 Python is widely used in various industries, including web development, data analysis, artificial intelligence, and more. This versatility is due to its extensive ecosystem of libraries and frameworks, which allows developers to quickly and easily build a wide range of applications.
 
