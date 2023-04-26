@@ -40,6 +40,7 @@ In this example, the concatenate_strings function accepts two input strings, com
 Python functions can also utilize control structures such as for loops and if-else statements. Let's explore a function that counts the number of even and odd numbers in a list:
 
 ```python
+
 def count_even_odd_numbers(numbers):
     even_count = 0
     odd_count = 0
@@ -56,6 +57,7 @@ numbers_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 even_count, odd_count = count_even_odd_numbers(numbers_list)
 print(f"Even numbers: {even_count}")
 print(f"Odd numbers: {odd_count}")
+
 ```
 This function iterates through a list of numbers, checks if each number is even or odd, and counts the occurrences of each. It then returns the counts as a tuple.
 
