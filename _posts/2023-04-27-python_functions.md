@@ -35,7 +35,7 @@ print(full_name)  # Output: Ada Lovelace
 
 In this example, the concatenate_strings function accepts two input strings, combines them with a space in between, and returns the resulting string.
 
-Control Structures in Python Functions:
+## Control Structures in Python Functions:
 
 Python functions can also utilize control structures such as for loops and if-else statements. Let's explore a function that counts the number of even and odd numbers in a list:
 
