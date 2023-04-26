@@ -62,3 +62,5 @@ This function iterates through a list of numbers, checks if each number is even 
 ## Conclusion:
 
 Python functions offer a powerful way to organize your code and create reusable, modular components. By mastering the basics of defining, calling, and working with functions, you can streamline your code and tackle a wide range of programming challenges. Don't be afraid to experiment and create your own custom functions as you continue your Python journey!
+
+If you want to learn more, check out my GitHub repository at https://github.com/byambaa1982/python_cources_for_beginers/tree/main/4_functions. It's free to clone, learn from, and share with others if you find it helpful. Keep exploring and expanding your Python skills!
