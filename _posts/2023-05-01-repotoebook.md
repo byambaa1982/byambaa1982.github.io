@@ -1,5 +1,5 @@
 ---
-title: Transform Your GitHub Repository into an Engaging eBook: Tools, Methods, and Success Stories
+title: Transform Your GitHub Repository into an Engaging eBook - Tools, Methods, and Success Stories
 tag: Technology
 ---
 
