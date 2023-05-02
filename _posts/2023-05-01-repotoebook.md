@@ -18,9 +18,9 @@ There are numerous tools and methods available for converting your GitHub reposi
 
 - Pandoc: Pandoc is a universal document converter that supports various formats like Markdown, HTML, LaTeX, and more. You can use Pandoc to convert your repository files (e.g., Markdown or HTML) to eBook formats like EPUB or PDF. First, clone your repository, then use Pandoc to convert the files.
 
-- Jupyter Book: ...
+- Jupyter Book: If your repository consists of Jupyter Notebooks, Jupyter Book is a great option to create an eBook. Jupyter Book allows you to build a book-like structure with your Notebooks and supports exporting to PDF and EPUB formats. To get started, follow the instructions in the Jupyter Book documentation: https://jupyterbook.org/intro.html
 
-- GitBook: If your repository consists of Jupyter Notebooks, Jupyter Book is a great option to create an eBook. Jupyter Book allows you to build a book-like structure with your Notebooks and supports exporting to PDF and EPUB formats. To get started, follow the instructions in the Jupyter Book documentation: https://jupyterbook.org/intro.html
+- GitBook: GitBook is a documentation tool that integrates with your GitHub repositories. You can create an eBook-like structure for your content and export it to PDF or EPUB. GitBook is primarily designed for documentation, but it can be used to create an eBook as well. To get started, sign up at https://www.gitbook.com/ and follow the instructions to import your repository.
 
 - Leanpub: GitBook is a documentation tool that integrates with your GitHub repositories. You can create an eBook-like structure for your content and export it to PDF or EPUB. GitBook is primarily designed for documentation, but it can be used to create an eBook as well. To get started, sign up at https://www.gitbook.com/ and follow the instructions to import your repository.
 
