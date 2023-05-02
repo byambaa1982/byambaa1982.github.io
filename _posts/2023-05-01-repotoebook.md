@@ -12,7 +12,7 @@ In today's fast-paced, technology-driven world, sharing knowledge is more import
 
 In this blog post, we'll explore various tools and methods that can help you turn your GitHub repository into a professional-looking eBook. We'll also share some inspiring success stories of those who have effectively leveraged their GitHub repositories to create eBooks that educate, inform, and entertain.
 
-Tools and Methods for Converting Your GitHub Repo to an eBook
+## Tools and Methods for Converting Your GitHub Repo to an eBook
 
 There are numerous tools and methods available for converting your GitHub repository into an eBook. Here are some popular options:
 
