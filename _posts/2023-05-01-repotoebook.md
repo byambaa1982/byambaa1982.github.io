@@ -38,7 +38,7 @@ Tom, a self-taught developer, decided to document his journey learning JavaScrip
 
 His eBook, "The Road to JavaScript Mastery," became an online sensation, helping countless aspiring developers to learn JavaScript from scratch. Tom's success story exemplifies the potential of combining the power of GitHub and eBook publishing platforms to create compelling and educational content.
 
-Conclusion: Unleash the Potential of Your GitHub Repository
+## Conclusion: Unleash the Potential of Your GitHub Repository
 
 The tools and methods highlighted in this blog post demonstrate how you can transform your GitHub repository into an engaging and informative eBook. By doing so, you'll be able to share your knowledge, showcase your expertise, and potentially inspire others to embark on their learning journeys.
 
