@@ -3,7 +3,6 @@ title: Create a Simple Flask App
 tag: Technology
 ---
 
-# 7. Create a Simple Flask App 
 
 
 Creating a Flask application usually requires two primary files: an app.py file which will contain your application's code, and a requirements.txt file to list any dependencies your application might have. In this case, our Flask application will be very basic and will just display a "Hello, World!" message when someone accesses it.
