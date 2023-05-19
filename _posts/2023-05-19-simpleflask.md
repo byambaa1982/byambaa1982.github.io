@@ -5,6 +5,23 @@ tag: Technology
 
 [Source Code](https://github.com/byambaa1982/python_cources_for_beginers/tree/main/Mini%20Project%202)
 
+`Flask` is a micro web framework written in Python. It's considered a micro framework because it does not require particular tools or libraries, but it's expandable and can support complex applications as well. It has a very small and easy-to-understand code base, and provides only a few essential components out of the box, such as routing, request handling, and HTML templating. However, it's highly extensible and allows you to add more functionality through extensions and libraries, including database integration, form validation, authentication, and more.
+
+Here's why you might want to choose Flask for your web development project:
+
+1. `Simplicity and Ease of Use`: Flask is very simple to set up and use. It's a good choice if you're new to web development, if you're a solo developer, or if you're working on a small project. The Flask documentation is very comprehensive and easy to understand.
+
+2. `Flexibility`: Flask is very flexible. It doesn't make many decisions for you, which means you have the freedom to structure your application however you like and use whatever libraries or tools you prefer. This is a contrast to more "batteries-included" frameworks, like Django, which come with more built-in tools but are also more prescriptive.
+
+3. `Lightweight`: Flask is lightweight and has a small footprint, meaning it uses less system resources and can run efficiently on small servers.
+
+4. `Extensibility`: Even though Flask is lightweight and simple, it can be extended with various extensions to add functionalities such as SQL databases, authentication, form handling, and more. This makes it a good choice for both simple and complex projects.
+
+5. `Community and Ecosystem`: Flask has a large and active community of developers, so it's easy to find help when you need it. There are many tutorials, guides, and examples available, as well as a large number of libraries and extensions.
+
+6. `Integration with Python ecosystem`: Since Flask is a Python framework, you have access to the vast Python ecosystem and all its libraries for tasks such as data analysis, machine learning, and more.
+
+Overall, Flask provides a nice balance between simplicity, flexibility, and power, which makes it a popular choice for web development in Python.
 Creating a Flask application usually requires two primary files: an app.py file which will contain your application's code, and a requirements.txt file to list any dependencies your application might have. In this case, our Flask application will be very basic and will just display a "Hello, World!" message when someone accesses it.
 
 
