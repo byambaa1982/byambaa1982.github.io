@@ -28,6 +28,14 @@ Creating a Flask application usually requires two primary files: an app.py file 
 
 Here's what those files might look like:
 
+```
+python_cources_for_beginners/
+└── Mini Project 2/
+    ├── requirements.txt
+    └── app.py
+
+```
+
 <br />
 
 1. `app.py`:
@@ -291,6 +299,23 @@ if __name__ == '__main__':
 
 In this updated `app.py` file, we've moved the `render_template` function out of the if statement. Now, it runs whether the request method is 'GET' or 'POST'. When the method is 'POST', we get the submitted text, convert it to lowercase, and pass it to our `form.html` template as the `message` variable. When the method is 'GET', we pass an empty string as the `message` variable.
 
-Now, when you submit text in the form at `http://127.0.0.1:5000/form` or `http://localhost:5000/form`, you should see your submitted text displayed in lowercase on the same page, below the form.
+Upon the completion of this project, our Flask application will have the capability to accept user input through a form. This user-submitted text can be processed in three distinct ways, determined by the selection of one of three buttons: transforming the text to all uppercase, converting it to all lowercase, or computing the word count of the input. This interactive functionality will be seamlessly integrated into our application through the use of CSS for styling and HTML for structuring our web pages.
 
+```
+python_cources_for_beginners/
+├── images/
+│   ├── flask_page.png
+└── Mini Project 2/
+    ├── static/
+    │   ├── images/
+    │   │   ├── flask_page.png
+    │   └── style.css
+    ├── templates/
+    │   ├── form.html
+    │   └── index.html
+    └── app.py
+
+```
+
+![simple web page](../images/flask_page.png)
 
