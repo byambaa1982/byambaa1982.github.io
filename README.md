@@ -1,5 +1,5 @@
 
-## Read My Blogs ![here](https://byambaa1982.github.io/)
+## Read My Blogs [here](https://byambaa1982.github.io)
 
 | Name | Description |
 | --- | --- |
