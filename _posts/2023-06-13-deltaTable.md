@@ -127,7 +127,12 @@ deltaTable = DeltaTable.forPath(spark, "/tmp/delta_table")
 # Run a query and Spark will use data skipping if possible
 result = deltaTable.toDF().filter("Age > 30").show()
 ```
-
++-------+---+
+|   Name|Age|
++-------+---+
+|   Dave| 40|
+|Charlie| 35|
++-------+---+
 In this example:
 
 1. We first create a DataFrame with some simple data and write it to a Delta table.
