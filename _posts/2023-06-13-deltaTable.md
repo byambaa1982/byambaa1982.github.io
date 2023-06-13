@@ -247,10 +247,26 @@ updated_df.write.format("delta").mode("overwrite").save("/tmp/delta_table")
 previous_version = spark.read.format("delta").option("versionAsOf", 0).load("/tmp/delta_table")
 previous_version.show()
 
++-------+----------+------+
+|   Name|Department|Salary|
++-------+----------+------+
+|  Alice|     Sales|  5000|
+|    Bob| Marketing|  4000|
+|Charlie|     Sales|  6000|
+|   Dave| Marketing|  3000|
++-------+----------+------+
+
 # And the current version
 current_version = spark.read.format("delta").option("versionAsOf", 1).load("/tmp/delta_table")
 current_version.show()
-
++-------+----------+------+
+|   Name|Department|Salary|
++-------+----------+------+
+|  Alice|     Sales|  5500|
+|    Bob| Marketing|  4500|
+|Charlie|     Sales|  6500|
+|   Dave| Marketing|  3500|
++-------+----------+------+
 ```
 
 Remember to also leverage the power of Spark's Catalyst Optimizer, which works under the hood to optimize the execution of your queries.
