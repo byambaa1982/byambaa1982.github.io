@@ -46,6 +46,16 @@ data = [("Alice", "Sales", 5000),
         ("Charlie", "Sales", 6000), 
         ("Dave", "Marketing", 3000)]
 df = spark.createDataFrame(data, ["Name", "Department", "Salary"])
+df.show()
+
++-------+----------+------+
+|   Name|Department|Salary|
++-------+----------+------+
+|  Alice|     Sales|  5000|
+|    Bob| Marketing|  4000|
+|Charlie|     Sales|  6000|
+|   Dave| Marketing|  3000|
++-------+----------+------+
 
 # Write the DataFrame to a Delta table
 df.write.format("delta").save("/tmp/delta_table")
