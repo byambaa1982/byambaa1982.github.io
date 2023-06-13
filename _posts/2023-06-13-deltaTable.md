@@ -81,18 +81,6 @@ However, compaction is a resource-intensive operation, so it should be used judi
 - `Partitioning`: Partitioning breaks data into discrete buckets based on a particular column or set of columns. This can significantly improve query performance as it allows Delta Lake to skip reading unnecessary data. For instance, if your table has a date column, you could partition the data by date, so queries for a specific date only read data from that particular partition.
 
 ```python 
-from pyspark.sql import SparkSession
-
-# Create a SparkSession
-spark = SparkSession.builder \
-    .appName("Partitioning Example") \
-    .getOrCreate()
-
-# Create a DataFrame
-data = [("Alice", "Sales", 5000), 
-        ("Bob", "Marketing", 4000), 
-        ("Charlie", "Sales", 6000), 
-        ("Dave", "Marketing", 3000)]
 df = spark.createDataFrame(data, ["Name", "Department", "Salary"])
 
 # Write the DataFrame to a Delta table, partitioned by Department
@@ -100,7 +88,6 @@ df.write.partitionBy("Department").format("delta").save("/tmp/delta_table")
 
 # Now, when you query the table filtering by the "Department", Delta Lake will only read the necessary partition.
 result = spark.read.format("delta").load("/tmp/delta_table").filter("Department = 'Sales'").show()
-
 ```
 
 In this example:
@@ -115,14 +102,6 @@ Partitioning can be a very effective optimization strategy, but it's important t
 - `Z-Ordering (Multi-dimensional clustering)`: This is a technique that co-locates related information in the same set of files. Z-Ordering can improve the performance of queries that filter by a specific column (or set of columns).
 
 ```python
-# Import necessary PySpark and Delta modules
-from pyspark.sql import SparkSession
-from delta.tables import DeltaTable
-
-# Create a SparkSession
-spark = SparkSession.builder \
-    .appName("Data Skipping Example") \
-    .getOrCreate()
 
 # Create a DataFrame
 data = [("Alice", 25), ("Bob", 30), ("Charlie", 35), ("Dave", 40)]
@@ -156,20 +135,6 @@ In this example:
 - `Data Skipping`: Delta Lake collects statistics about the data in each file when writing into a table. When querying, Delta Lake can use these statistics to skip unnecessary data. For instance, if a file's maximum and minimum values for a certain column don't satisfy a filter condition, that whole file can be skipped.
 
 ```python 
-
-# Import necessary PySpark and Delta modules
-from pyspark.sql import SparkSession
-from delta.tables import DeltaTable
-
-# Create a SparkSession
-spark = SparkSession.builder \
-    .appName("Data Skipping Example") \
-    .getOrCreate()
-
-# Create a DataFrame
-data = [("Alice", 25), ("Bob", 30), ("Charlie", 35), ("Dave", 40)]
-df = spark.createDataFrame(data, ["Name", "Age"])
-
 # Write the DataFrame to a Delta table
 df.write.format("delta").save("/tmp/delta_table")
 
@@ -179,6 +144,12 @@ deltaTable = DeltaTable.forPath(spark, "/tmp/delta_table")
 # Run a query and Spark will use data skipping if possible
 result = deltaTable.toDF().filter("Age > 30").show()
 
++-------+---+
+|   Name|Age|
++-------+---+
+|   Dave| 40|
+|Charlie| 35|
++-------+---+
 ```
 
 In this code:
