@@ -1,5 +1,5 @@
 ---
-title:  the Power of Data Engineering in the Modern Digital Landscape
+title:  The Power of Data Engineering in the Modern Digital Landscape
 tag: Technology
 ---
 
