@@ -15,7 +15,7 @@ As we revel in the conveniences of the digital age, from instant movie recommend
 
 3. Infrastructure and Scalability: Data engineers design and maintain the infrastructure that holds a company's data, ensuring that it's not only secure but also scalable, handling future data influxes.
 
-## istinguishing Data Engineers from Backend Developers, Data Scientists, and Analysts
+## Distinguishing Data Engineers from Backend Developers, Data Scientists, and Analysts
 
 - Backend Developers: While backend developers focus on creating server-side applications, handling API requests, and managing databases, data engineers specifically focus on the flow, cleaning, and storage of data. They often work with big data technologies and tools like Hadoop, Spark, and Kafka.
 
