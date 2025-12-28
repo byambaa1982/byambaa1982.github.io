@@ -26,7 +26,7 @@ The data engineering field offers exceptional earning potential. According to [3
 **Salary ranges by experience :**
 
 <div style="overflow-x:auto;">
-
+```
 | Experience Level | Salary Range (Annual) | Average |
 |------------------|-----------------------|---------|
 | 0–1 Years        | $91,000–$155,000      | $123,000 |
@@ -35,7 +35,7 @@ The data engineering field offers exceptional earning potential. According to [3
 | 7–9 Years        | $114,000–$193,000     | $153,500 |
 | 10–14 Years      | $117,000–$201,000     | $159,000 |
 | 15+ Years        | $130,000–$225,000     | $177,500 |
-
+```
 </div>
 
 **Source :** Glassdoor data via 365 Data Science (1,000 job postings analyzed in 2024)
