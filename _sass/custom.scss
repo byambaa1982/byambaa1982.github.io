@@ -107,6 +107,7 @@ h3 {
       transition: var(--transition-smooth);
       font-weight: 500;
       font-size: 0.95rem;
+      color: #2d3748;
       
       &:hover {
         background: rgba(102, 126, 234, 0.1);
@@ -117,7 +118,7 @@ h3 {
     
     &--active a {
       background: var(--primary-gradient);
-      color: white;
+      color: white !important;
       box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
     }
   }
