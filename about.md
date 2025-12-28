@@ -35,9 +35,9 @@ key: page-about
   </div>
 </div>
 
-<div class="about-content">
-  
-  ## 👨‍👩‍👧‍👦 About Me
+<div class="about-content" markdown="1">
+
+## 👨‍👩‍👧‍👦 About Me
   
   I am a proud father of two wonderful children and a **data engineer by profession**. I have a deep passion for reading, traveling, and exploring the intersection of technology and human experience. I believe that life is an incredible journey, and I love to share my thoughts, experiences, and learnings with others.
   
