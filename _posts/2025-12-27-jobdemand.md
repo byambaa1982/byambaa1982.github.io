@@ -23,12 +23,7 @@ tags: [Career, Data Engineering, Technology]
 
 The data engineering field offers exceptional earning potential. According to [365 Data Science's 2024 analysis](https://365datascience.com/career-advice/data-engineer-job-market/), the average annual salary stands at **$153,000**, representing a remarkable **$40,000 increase** from January 2023 to 2024.
 
-**Salary ranges by experience :**
-
-
-
-
-```table
+**Salary ranges by experience:**
 
 | Experience Level | Salary Range (Annual) | Average  |
 |------------------|-----------------------|----------|
@@ -38,8 +33,6 @@ The data engineering field offers exceptional earning potential. According to [3
 | 7–9 Years        | $114,000–$193,000     | $153,500 |
 | 10–14 Years      | $117,000–$201,000     | $159,000 |
 | 15+ Years        | $130,000–$225,000     | $177,500 |
-
-```
 
 
 

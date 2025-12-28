@@ -455,10 +455,21 @@ h3 {
   }
   
   table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--card-shadow);
     margin: 2rem 0;
+    font-size: 0.95rem;
+    
+    @media (max-width: 768px) {
+      font-size: 0.85rem;
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
     
     thead {
       background: var(--primary-gradient);
@@ -467,10 +478,18 @@ h3 {
       th {
         padding: 1rem;
         font-weight: 600;
+        text-align: left;
+        
+        @media (max-width: 768px) {
+          padding: 0.8rem 0.5rem;
+          font-size: 0.85rem;
+        }
       }
     }
     
     tbody {
+      background: white;
+      
       tr {
         transition: var(--transition-smooth);
         
@@ -479,12 +498,31 @@ h3 {
         }
         
         &:hover {
-          background: rgba(102, 126, 234, 0.05);
+          background: rgba(102, 126, 234, 0.08);
+          transform: scale(1.01);
         }
         
         td {
           padding: 1rem;
           border-bottom: 1px solid #e2e8f0;
+          
+          @media (max-width: 768px) {
+            padding: 0.8rem 0.5rem;
+          }
+          
+          &:first-child {
+            font-weight: 500;
+            color: var(--text-primary);
+          }
+          
+          &:last-child {
+            font-weight: 600;
+            color: var(--accent-color);
+          }
+        }
+        
+        &:last-child td {
+          border-bottom: none;
         }
       }
     }
