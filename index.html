@@ -3,3 +3,25 @@ layout: home
 # articles:
 #   excerpt_type: html
 ---
+<!-- Hero Section -->
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>Byambalogy</h1>
+    <p>Discovering the Beauty Within and Beyond - A journey through data engineering, technology, and the adventures of life</p>
+    <div class="hero-cta">
+      <a href="#articles" class="button button--primary">Explore Articles</a>
+      <a href="/about.html" class="button button--secondary">About Me</a>
+    </div>
+  </div>
+</div>
+
+<!-- Articles Section -->
+<div class="layout--home" id="articles">
+  {%- include paginator.html -%}
+</div>
+
+<script>
+  {%- include scripts/home.js -%}
+</script>
+
+{{ content }}

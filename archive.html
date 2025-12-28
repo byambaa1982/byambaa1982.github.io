@@ -1,3 +1,71 @@
 ---
 layout: archive
 ---
+
+<!-- Archive Hero Section -->
+<div class="archive-hero">
+  <div class="archive-hero-content">
+    <h1 class="text-gradient">Article Archive</h1>
+    <p>Explore all articles organized by year and topic</p>
+  </div>
+</div>
+
+<style>
+.archive-hero {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 4rem 2rem;
+  margin: -2rem -2rem 3rem -2rem;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.archive-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+.archive-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.archive-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.archive-hero p {
+  font-size: 1.2rem;
+  color: #718096;
+}
+
+/* Enhance archive items */
+.archive-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.archive-item:hover {
+  background: rgba(102, 126, 234, 0.05);
+  transform: translateX(8px);
+}
+
+.archive-item a {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.archive-item a:hover {
+  color: #667eea;
+}
+</style>
