@@ -4,7 +4,6 @@ title: "Building a Production-Ready Multi-Agent AI System on Google Cloud: A Com
 date: 2025-11-22
 categories: [AI, Google Cloud, Data Engineering, Architecture]
 tags: [multi-agent-systems, vertex-ai, google-cloud, ai-agents, content-generation, production-ai]
-author: Byamba Enkhbat
 excerpt: "How I built a scalable multi-agent AI system on Google Cloud that generates content for $0.28 per piece with 92% quality scores. A deep dive into architecture, challenges, and lessons learned."
 ---
 
@@ -24,7 +23,6 @@ What if we could orchestrate specialized AI agents to handle each step, working 
 
 
 
-```table
 ┌─────────────────────────────────────────────────────────────────────┐
 │                        Client Layer                                 │
 │  (Web UI, Mobile App, API Clients, CLI Tools)                       │
@@ -108,12 +106,11 @@ What if we could orchestrate specialized AI agents to handle each step, working 
 │  │ Logging      │ │ Monitoring   │ │ Trace        │                 │
 │  └──────────────┘ └──────────────┘ └──────────────┘                 │
 └─────────────────────────────────────────────────────────────────────┘
-```
+
 
 ---
 The system consists of 8 specialized AI agents, each with a specific role:
 
-```table
 
 | Agent | Purpose | Key Responsibility |
 |-------|---------|-------------------|
@@ -126,7 +123,7 @@ The system consists of 8 specialized AI agents, each with a specific role:
 | Video Creator | Generate videos | Short-form video content |
 | Audio Creator | Produce audio | Podcasts, voice-overs |
 
-```
+
 
 ### The Workflow Pipeline
 
