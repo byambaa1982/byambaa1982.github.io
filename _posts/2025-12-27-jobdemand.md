@@ -3,7 +3,7 @@ title: Why Data Engineer Salaries Hit $153K in 2025 - Complete Career Guide
 tags: [Career, Data Engineering, Technology]
 ---
 
-![Data Engineering Career Path](/images/data_eng.jpg)
+![Data Engineering Career Path](/images/dataengineer.png)
 
 **Is data engineering worth pursuing in 2025?** With an average salary of $153,000 and 102,000+ job openings nationwide, the answer is a resounding yes. This comprehensive guide reveals everything you need to know about breaking into one of tech's hottest careers.
 
