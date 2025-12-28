@@ -27,7 +27,7 @@ key: page-about
 ---
 
 <div class="about-hero">
-  <img src="https://storage.googleapis.com/twittersheet-275317/cdc_dataset_de_interview/teeg.jpg" alt="Byamba Enkhbat" class="about-image">
+  <img src="/images/byamba_photo.jpg" alt="Byamba Enkhbat" class="about-image">
   
   <div class="about-intro">
     <h1 class="text-gradient">Hello, I'm Byamba Enkhbat</h1>
