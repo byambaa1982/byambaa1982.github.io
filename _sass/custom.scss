@@ -107,19 +107,30 @@ h3 {
       transition: var(--transition-smooth);
       font-weight: 500;
       font-size: 0.95rem;
-      color: #2d3748;
+      color: #2d3748 !important;
+      text-decoration: none !important;
       
       &:hover {
-        background: rgba(102, 126, 234, 0.1);
-        color: var(--accent-color);
+        background: rgba(102, 126, 234, 0.1) !important;
+        color: var(--accent-color) !important;
         transform: translateY(-1px);
       }
     }
     
-    &--active a {
-      background: var(--primary-gradient);
-      color: white !important;
-      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    &::after {
+      display: none !important;
+    }
+    
+    &--active {
+      a {
+        background: var(--primary-gradient) !important;
+        color: white !important;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      }
+      
+      &::after {
+        display: none !important;
+      }
     }
   }
 }
