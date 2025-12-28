@@ -52,5 +52,5 @@ header:
     url: /about.html
   
   - titles:
-      en      : &EN       Test
-    url:  /test.html
+      en      : &EN       Projects
+    url:  /projects.html
