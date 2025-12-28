@@ -24,7 +24,7 @@ What if we could orchestrate specialized AI agents to handle each step, working 
 
 
 
-```
+```table
 ┌─────────────────────────────────────────────────────────────────────┐
 │                        Client Layer                                 │
 │  (Web UI, Mobile App, API Clients, CLI Tools)                       │
@@ -113,7 +113,7 @@ What if we could orchestrate specialized AI agents to handle each step, working 
 ---
 The system consists of 8 specialized AI agents, each with a specific role:
 
-<div style="overflow-x:auto;">
+```table
 
 | Agent | Purpose | Key Responsibility |
 |-------|---------|-------------------|
@@ -126,7 +126,7 @@ The system consists of 8 specialized AI agents, each with a specific role:
 | Video Creator | Generate videos | Short-form video content |
 | Audio Creator | Produce audio | Podcasts, voice-overs |
 
-</div>
+```
 
 ### The Workflow Pipeline
 
