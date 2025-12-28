@@ -38,57 +38,57 @@ key: page-about
 <div class="about-content" markdown="1">
 
 ## 👨‍👩‍👧‍👦 About Me
-  
-  I am a proud father of two wonderful children and a **data engineer by profession**. I have a deep passion for reading, traveling, and exploring the intersection of technology and human experience. I believe that life is an incredible journey, and I love to share my thoughts, experiences, and learnings with others.
-  
-  ## 💡 My Philosophy
-  
-  > "Learning about the world and the people in it can broaden our horizons and enrich our lives in countless ways."
-  
-  Ever since I was a child, I have been fascinated by the world around me. I dreamed of traveling to every corner of the globe and experiencing different cultures, languages, and ways of life. Whether it's through reading, traveling, or simply engaging with others, I am always seeking new opportunities to grow and broaden my perspective.
-  
-  ## 🚀 Professional Journey
-  
-  As a **data engineer**, I work at the intersection of technology and data, building systems that transform raw information into meaningful insights. I'm always eager to learn about the latest technologies and advancements in my field, from cloud computing and big data to machine learning and AI.
-  
-  ### What I'm Currently Exploring
-  
-  - **Cloud Technologies**: Azure, AWS, and modern data platforms
-  - **Data Engineering**: Spark, Python, SQL, and ETL pipelines
-  - **Career Development**: Helping others navigate the data engineering landscape
-  - **Content Creation**: Sharing knowledge through writing and tutorials
-  
-  ## 🎯 Beyond Work
-  
-  In my spare time, I enjoy:
-  
-  - **Family Time**: Spending quality moments with my two children and loved ones
-  - **Reading**: Diving into books on technology, philosophy, and personal growth
-  - **Outdoor Activities**: Hiking, exploring nature, and staying active
-  - **Photography**: Capturing the beauty of the world through my lens
-  - **Traveling**: Discovering new places and experiencing diverse cultures
-  
-  ## 🌟 My Mission
-  
-  Through this blog, I aim to:
-  
-  1. **Share Knowledge**: Document my learning journey in data engineering and technology
-  2. **Inspire Others**: Encourage continuous learning and personal growth
-  3. **Build Community**: Connect with like-minded individuals passionate about technology
-  4. **Document Experiences**: Share travel stories and life lessons
-  
-  ## 📬 Let's Connect
-  
-  I'm grateful for the opportunities that life has given me, and I'm determined to make the most of every moment. If you share similar interests or just want to connect, feel free to reach out!
-  
-  ---
-  
-  <div style="text-align: center; padding: 2rem 0;">
-    <p style="font-style: italic; color: #718096;">
-      "The journey of a thousand miles begins with a single step." - Lao Tzu
-    </p>
-  </div>
-  
+
+I am a proud father of two wonderful children and a **data engineer by profession**. I have a deep passion for reading, traveling, and exploring the intersection of technology and human experience. I believe that life is an incredible journey, and I love to share my thoughts, experiences, and learnings with others.
+
+## 💡 My Philosophy
+
+> "Learning about the world and the people in it can broaden our horizons and enrich our lives in countless ways."
+
+Ever since I was a child, I have been fascinated by the world around me. I dreamed of traveling to every corner of the globe and experiencing different cultures, languages, and ways of life. Whether it's through reading, traveling, or simply engaging with others, I am always seeking new opportunities to grow and broaden my perspective.
+
+## 🚀 Professional Journey
+
+As a **data engineer**, I work at the intersection of technology and data, building systems that transform raw information into meaningful insights. I'm always eager to learn about the latest technologies and advancements in my field, from cloud computing and big data to machine learning and AI.
+
+### What I'm Currently Exploring
+
+- **Cloud Technologies**: Azure, AWS, and modern data platforms
+- **Data Engineering**: Spark, Python, SQL, and ETL pipelines
+- **Career Development**: Helping others navigate the data engineering landscape
+- **Content Creation**: Sharing knowledge through writing and tutorials
+
+## 🎯 Beyond Work
+
+In my spare time, I enjoy:
+
+- **Family Time**: Spending quality moments with my two children and loved ones
+- **Reading**: Diving into books on technology, philosophy, and personal growth
+- **Outdoor Activities**: Hiking, exploring nature, and staying active
+- **Photography**: Capturing the beauty of the world through my lens
+- **Traveling**: Discovering new places and experiencing diverse cultures
+
+## 🌟 My Mission
+
+Through this blog, I aim to:
+
+1. **Share Knowledge**: Document my learning journey in data engineering and technology
+2. **Inspire Others**: Encourage continuous learning and personal growth
+3. **Build Community**: Connect with like-minded individuals passionate about technology
+4. **Document Experiences**: Share travel stories and life lessons
+
+## 📬 Let's Connect
+
+I'm grateful for the opportunities that life has given me, and I'm determined to make the most of every moment. If you share similar interests or just want to connect, feel free to reach out!
+
+---
+
+<div style="text-align: center; padding: 2rem 0;">
+  <p style="font-style: italic; color: #718096;">
+    "The journey of a thousand miles begins with a single step." - Lao Tzu
+  </p>
+</div>
+
 </div>
 
 <style>
