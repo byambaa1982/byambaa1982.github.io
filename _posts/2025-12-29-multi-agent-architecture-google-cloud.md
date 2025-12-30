@@ -107,8 +107,10 @@ class SupervisorAgent:
 
 Agents communicate directly without a central coordinator, ideal for dynamic workflows.
 
-![Peer-to-Peer Multi-Agent Architecture](/images/blog/multi-agent-gcp/peer-to-peer-diagram.png)
-*Peer-to-Peer Multi-Agent Architecture - agents communicating via Pub/Sub message bus without central coordination*
+<div style="text-align: center; margin: 30px 0;">
+  <iframe src="/images/blog/multi-agent-gcp/peer-to-peer-diagram.html" width="100%" height="600px" frameborder="0" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></iframe>
+  <p style="font-size: 13px; color: #5f6368; margin-top: 10px;"><em>Interactive Diagram: Peer-to-Peer Multi-Agent Architecture with Pub/Sub Communication</em></p>
+</div>
 
 
 **Google Cloud Implementation:**
@@ -162,8 +164,10 @@ class CollaborativeAgent:
 
 Sequential processing where each agent's output becomes the next agent's input.
 
-![Pipeline Multi-Agent Architecture](/images/blog/multi-agent-gcp/pipeline-diagram.png)
-*Pipeline Multi-Agent Architecture - sequential data processing through Extract, Transform, and Validate agents*
+<div style="text-align: center; margin: 30px 0;">
+  <iframe src="/images/blog/multi-agent-gcp/pipeline-diagram.html" width="100%" height="700px" frameborder="0" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></iframe>
+  <p style="font-size: 13px; color: #5f6368; margin-top: 10px;"><em>Interactive Diagram: Pipeline Multi-Agent Architecture with Cloud Workflows Orchestration</em></p>
+</div>
 
 **Architecture Components:**
 
@@ -434,10 +438,12 @@ class AgentMemory:
 
 Here's a complete architecture for a content generation system with 3 agents:
 
-![Production Multi-Agent System Architecture](/images/blog/multi-agent-gcp/production-architecture.png)
-*Production Multi-Agent System - complete 4-layer architecture with API Gateway, Orchestration, AI Agents, and Intelligence layers*
+<div style="text-align: center; margin: 30px 0;">
+  <iframe src="/images/blog/multi-agent-gcp/production-architecture.html" width="100%" height="900px" frameborder="0" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);\"></iframe>
+  <p style="font-size: 13px; color: #5f6368; margin-top: 10px;"><em>Interactive Diagram: Production Multi-Agent System with Complete Service Architecture</em></p>
+</div>
 
-
+<div style="overflow-x:auto;">
 
 | Component | Service | Purpose | Cost/Month |
 |-----------|---------|---------|------------|
@@ -452,7 +458,7 @@ Here's a complete architecture for a content generation system with 3 agents:
 | AI Models | Vertex AI | Intelligence | $50-150 |
 | **Total** | - | 500 workflows/month | **$145-350** |
 
-
+</div>
 
 **System Flow:**
 
