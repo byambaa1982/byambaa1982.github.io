@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Multi-Agent Architecture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+            background: #f8f9fa;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .diagram-container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .diagram-title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 600;
+            color: #202124;
+            margin-bottom: 10px;
+        }
+        
+        .diagram-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #5f6368;
+            margin-bottom: 40px;
+        }
+        
+        .architecture-layers {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .layer {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 4px solid #4285f4;
+        }
+        
+        .layer-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #202124;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .layer-badge {
+            background: #4285f4;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .service-card {
+            background: white;
+            border: 2px solid #e8eaed;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .service-card:hover {
+            border-color: #4285f4;
+            box-shadow: 0 2px 8px rgba(66, 133, 244, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+        
+        .service-info {
+            flex: 1;
+        }
+        
+        .service-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: #202124;
+            margin-bottom: 4px;
+        }
+        
+        .service-role {
+            font-size: 12px;
+            color: #5f6368;
+        }
+        
+        .cost-badge {
+            background: #e8f5e9;
+            color: #1e8e3e;
+            padding: 2px 8px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        .flow-diagram {
+            margin-top: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            border: 2px dashed #e8eaed;
+        }
+        
+        .flow-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: #202124;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .flow-steps {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .flow-step {
+            background: #f8f9fa;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #5f6368;
+            border: 1px solid #e8eaed;
+        }
+        
+        .flow-arrow {
+            color: #34a853;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .metrics {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+        }
+        
+        .metric-value {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .legend-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #202124;
+            margin-bottom: 12px;
+        }
+        
+        .legend-items {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #5f6368;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <h2 class="diagram-title">Production Multi-Agent System Architecture</h2>
+        <div class="diagram-subtitle">Content Generation Platform on Google Cloud</div>
+        
+        <div class="architecture-layers">
+            <!-- API Layer -->
+            <div class="layer" style="border-left-color: #4285f4;">
+                <div class="layer-title">
+                    <span class="layer-badge" style="background: #4285f4;">Layer 1</span>
+                    API Gateway & Entry Point
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="cloud_run.svg" alt="Cloud Run" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">API Gateway</div>
+                            <div class="service-role">Request handling</div>
+                        </div>
+                        <div class="cost-badge">$5-15/mo</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Orchestration Layer -->
+            <div class="layer" style="border-left-color: #34a853;">
+                <div class="layer-title">
+                    <span class="layer-badge" style="background: #34a853;">Layer 2</span>
+                    Orchestration & Coordination
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="cloud_run.svg" alt="Cloud Run" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">Supervisor Agent</div>
+                            <div class="service-role">Workflow coordination</div>
+                        </div>
+                        <div class="cost-badge">$10-25/mo</div>
+                    </div>
+                    <div class="service-card">
+                        <img src="cloud_tasks.svg" alt="Cloud Tasks" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">Cloud Tasks</div>
+                            <div class="service-role">Async orchestration</div>
+                        </div>
+                        <div class="cost-badge">$0-5/mo</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Agent Layer -->
+            <div class="layer" style="border-left-color: #fbbc04;">
+                <div class="layer-title">
+                    <span class="layer-badge" style="background: #fbbc04;">Layer 3</span>
+                    Specialized AI Agents
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="cloud_run.svg" alt="Research Agent" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">Research Agent</div>
+                            <div class="service-role">Information gathering</div>
+                        </div>
+                        <div class="cost-badge">$15-30/mo</div>
+                    </div>
+                    <div class="service-card">
+                        <img src="cloud_run.svg" alt="Writing Agent" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">Writing Agent</div>
+                            <div class="service-role">Content creation</div>
+                        </div>
+                        <div class="cost-badge">$20-40/mo</div>
+                    </div>
+                    <div class="service-card">
+                        <img src="cloud_run.svg" alt="Editing Agent" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">Editing Agent</div>
+                            <div class="service-role">Quality assurance</div>
+                        </div>
+                        <div class="cost-badge">$10-20/mo</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI & Data Layer -->
+            <div class="layer" style="border-left-color: #ea4335;">
+                <div class="layer-title">
+                    <span class="layer-badge" style="background: #ea4335;">Layer 4</span>
+                    AI Intelligence & Data Management
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="vertexai.svg" alt="Vertex AI" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">Vertex AI</div>
+                            <div class="service-role">Gemini models</div>
+                        </div>
+                        <div class="cost-badge">$50-150/mo</div>
+                    </div>
+                    <div class="service-card">
+                        <img src="firestore.svg" alt="Firestore" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">Firestore</div>
+                            <div class="service-role">State management</div>
+                        </div>
+                        <div class="cost-badge">$5-15/mo</div>
+                    </div>
+                    <div class="service-card">
+                        <img src="cloud_storage.svg" alt="Cloud Storage" class="service-icon">
+                        <div class="service-info">
+                            <div class="service-name">Cloud Storage</div>
+                            <div class="service-role">Artifact storage</div>
+                        </div>
+                        <div class="cost-badge">$5-10/mo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- System Flow -->
+        <div class="flow-diagram">
+            <div class="flow-title">Request Processing Flow</div>
+            <div class="flow-steps">
+                <div class="flow-step">1. User Request</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">2. API Gateway</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">3. Supervisor Agent</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">4. Task Queue</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">5. Research Agent</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">6. Writing Agent</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">7. Editing Agent</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step">8. Response</div>
+            </div>
+        </div>
+        
+        <!-- Performance Metrics -->
+        <div class="metrics">
+            <div class="metric-card" style="background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);">
+                <div class="metric-value">15-30s</div>
+                <div class="metric-label">Average Latency</div>
+            </div>
+            <div class="metric-card" style="background: linear-gradient(135deg, #34a853 0%, #fbbc04 100%);">
+                <div class="metric-value">$0.15-0.30</div>
+                <div class="metric-label">Cost Per Execution</div>
+            </div>
+            <div class="metric-card" style="background: linear-gradient(135deg, #fbbc04 0%, #ea4335 100%);">
+                <div class="metric-value">50-100</div>
+                <div class="metric-label">Concurrent Workflows</div>
+            </div>
+            <div class="metric-card" style="background: linear-gradient(135deg, #ea4335 0%, #4285f4 100%);">
+                <div class="metric-value">99%+</div>
+                <div class="metric-label">Success Rate</div>
+            </div>
+        </div>
+        
+        <!-- Legend -->
+        <div class="legend">
+            <div class="legend-title">Architecture Layers</div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div style="width: 16px; height: 16px; background: #4285f4; border-radius: 3px;"></div>
+                    <span>API & Gateway Layer</span>
+                </div>
+                <div class="legend-item">
+                    <div style="width: 16px; height: 16px; background: #34a853; border-radius: 3px;"></div>
+                    <span>Orchestration Layer</span>
+                </div>
+                <div class="legend-item">
+                    <div style="width: 16px; height: 16px; background: #fbbc04; border-radius: 3px;"></div>
+                    <span>Agent Processing Layer</span>
+                </div>
+                <div class="legend-item">
+                    <div style="width: 16px; height: 16px; background: #ea4335; border-radius: 3px;"></div>
+                    <span>Intelligence & Data Layer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

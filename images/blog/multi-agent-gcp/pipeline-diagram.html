@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Agent Architecture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+            background: #f8f9fa;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .diagram-container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .diagram-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #202124;
+            margin-bottom: 40px;
+        }
+        
+        .pipeline {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+        
+        .pipeline-stage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            min-width: 180px;
+        }
+        
+        .stage-box {
+            background: white;
+            border: 3px solid #4285f4;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            width: 180px;
+            box-shadow: 0 2px 8px rgba(66, 133, 244, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .stage-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(66, 133, 244, 0.3);
+        }
+        
+        .stage-number {
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        
+        .stage-icon {
+            width: 56px;
+            height: 56px;
+        }
+        
+        .stage-label {
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+            color: #202124;
+        }
+        
+        .stage-action {
+            font-size: 12px;
+            color: #5f6368;
+            text-align: center;
+        }
+        
+        .stage-tech {
+            font-size: 11px;
+            color: #5f6368;
+            background: #e8f0fe;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+        
+        .arrow {
+            font-size: 32px;
+            color: #34a853;
+            flex-shrink: 0;
+            animation: slideRight 1.5s infinite;
+        }
+        
+        @keyframes slideRight {
+            0%, 100% {
+                transform: translateX(0);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translateX(5px);
+                opacity: 1;
+            }
+        }
+        
+        .input-output {
+            background: linear-gradient(135deg, #34a853, #0f9d58);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            min-width: 120px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(15, 157, 88, 0.3);
+        }
+        
+        .orchestration {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #fbbc04;
+        }
+        
+        .orchestration-title {
+            font-weight: 600;
+            font-size: 14px;
+            color: #202124;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .orchestration-content {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .service-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 2px solid #e8eaed;
+            font-size: 13px;
+            color: #5f6368;
+        }
+        
+        .service-icon {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .legend {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #5f6368;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <h2 class="diagram-title">Pipeline Multi-Agent Architecture</h2>
+        
+        <div class="pipeline">
+            <!-- Input -->
+            <div class="pipeline-stage">
+                <div class="input-output">
+                    Input Data
+                </div>
+            </div>
+            
+            <div class="arrow">→</div>
+            
+            <!-- Stage 1: Extract -->
+            <div class="pipeline-stage">
+                <div class="stage-box">
+                    <div class="stage-number">1</div>
+                    <img src="vertexai.svg" alt="Extract Agent" class="stage-icon">
+                    <div class="stage-label">Extract Agent</div>
+                    <div class="stage-action">Data extraction & parsing</div>
+                    <div class="stage-tech">Cloud Run</div>
+                </div>
+            </div>
+            
+            <div class="arrow">→</div>
+            
+            <!-- Stage 2: Transform -->
+            <div class="pipeline-stage">
+                <div class="stage-box">
+                    <div class="stage-number">2</div>
+                    <img src="vertexai.svg" alt="Transform Agent" class="stage-icon">
+                    <div class="stage-label">Transform Agent</div>
+                    <div class="stage-action">Data processing & enrichment</div>
+                    <div class="stage-tech">Cloud Run</div>
+                </div>
+            </div>
+            
+            <div class="arrow">→</div>
+            
+            <!-- Stage 3: Validate -->
+            <div class="pipeline-stage">
+                <div class="stage-box">
+                    <div class="stage-number">3</div>
+                    <img src="vertexai.svg" alt="Validate Agent" class="stage-icon">
+                    <div class="stage-label">Validate Agent</div>
+                    <div class="stage-action">Quality assurance & checks</div>
+                    <div class="stage-tech">Cloud Run</div>
+                </div>
+            </div>
+            
+            <div class="arrow">→</div>
+            
+            <!-- Output -->
+            <div class="pipeline-stage">
+                <div class="input-output">
+                    Output Data
+                </div>
+            </div>
+        </div>
+        
+        <!-- Orchestration Layer -->
+        <div class="orchestration">
+            <div class="orchestration-title">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 2L2 6L10 10L18 6L10 2Z" fill="#fbbc04"/>
+                    <path d="M2 14L10 18L18 14" stroke="#fbbc04" stroke-width="2"/>
+                    <path d="M2 10L10 14L18 10" stroke="#fbbc04" stroke-width="2"/>
+                </svg>
+                Orchestration & Supporting Services
+            </div>
+            <div class="orchestration-content">
+                <div class="service-badge">
+                    <img src="cloud_tasks.svg" alt="Cloud Tasks" class="service-icon">
+                    <span>Cloud Tasks - Queue Management</span>
+                </div>
+                <div class="service-badge">
+                    <img src="cloud_storage.svg" alt="Cloud Storage" class="service-icon">
+                    <span>Cloud Storage - Data Flow</span>
+                </div>
+                <div class="service-badge">
+                    <img src="firestore.svg" alt="Firestore" class="service-icon">
+                    <span>Firestore - State Tracking</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div style="width: 24px; height: 24px; background: linear-gradient(135deg, #34a853, #0f9d58); border-radius: 4px;"></div>
+                <span>Data Input/Output</span>
+            </div>
+            <div class="legend-item">
+                <div style="width: 24px; height: 24px; border: 3px solid #4285f4; border-radius: 6px;"></div>
+                <span>Processing Agent</span>
+            </div>
+            <div class="legend-item">
+                <div style="width: 24px; height: 2px; background: #34a853;"></div>
+                <span>Data Flow Direction</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

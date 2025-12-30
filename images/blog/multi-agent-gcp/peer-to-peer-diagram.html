@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer-to-Peer Agent Architecture</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+            background: #f8f9fa;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .diagram-container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        .diagram-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: #202124;
+            margin-bottom: 40px;
+        }
+        
+        .architecture {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 450px;
+        }
+        
+        .agent-circle {
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: white;
+            border: 3px solid #4285f4;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.2);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .agent-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.3);
+            z-index: 20;
+        }
+        
+        .agent-icon {
+            width: 56px;
+            height: 56px;
+        }
+        
+        .agent-label {
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .agent-tech {
+            font-size: 11px;
+            color: #5f6368;
+            background: #f1f3f4;
+            padding: 3px 10px;
+            border-radius: 10px;
+        }
+        
+        /* Position agents in circle */
+        .agent-1 {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .agent-2 {
+            top: 30%;
+            right: 10%;
+        }
+        
+        .agent-3 {
+            bottom: 15%;
+            right: 15%;
+        }
+        
+        .agent-4 {
+            bottom: 15%;
+            left: 15%;
+        }
+        
+        .agent-5 {
+            top: 30%;
+            left: 10%;
+        }
+        
+        /* Connection lines */
+        .connection-mesh {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        
+        .connection {
+            position: absolute;
+            background: linear-gradient(90deg, #4285f4, #34a853);
+            height: 2px;
+            transform-origin: left center;
+        }
+        
+        .pubsub-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #fbbc04 0%, #ea4335 100%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: white;
+            box-shadow: 0 4px 16px rgba(251, 188, 4, 0.4);
+            z-index: 5;
+        }
+        
+        .pubsub-icon {
+            width: 48px;
+            height: 48px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .pubsub-label {
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .message-flow {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #4285f4;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+        
+        .message-1 { top: 15%; left: 30%; animation-delay: 0s; }
+        .message-2 { top: 40%; right: 20%; animation-delay: 0.4s; }
+        .message-3 { bottom: 20%; right: 35%; animation-delay: 0.8s; }
+        .message-4 { bottom: 25%; left: 30%; animation-delay: 1.2s; }
+        .message-5 { top: 35%; left: 25%; animation-delay: 1.6s; }
+        
+        .legend {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #5f6368;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <h2 class="diagram-title">Peer-to-Peer Multi-Agent Architecture</h2>
+        
+        <div class="architecture">
+            <!-- Connection mesh visualization -->
+            <div class="connection-mesh">
+                <div class="message-flow message-1"></div>
+                <div class="message-flow message-2"></div>
+                <div class="message-flow message-3"></div>
+                <div class="message-flow message-4"></div>
+                <div class="message-flow message-5"></div>
+            </div>
+            
+            <!-- Central Pub/Sub -->
+            <div class="pubsub-center">
+                <img src="pubsub.svg" alt="Pub/Sub" class="pubsub-icon">
+                <div class="pubsub-label">Pub/Sub</div>
+            </div>
+            
+            <!-- Agents in circular layout -->
+            <div class="agent-circle agent-1">
+                <img src="vertexai.svg" alt="Vertex AI" class="agent-icon">
+                <div class="agent-label">Agent 1</div>
+                <div class="agent-tech">Cloud Run</div>
+            </div>
+            
+            <div class="agent-circle agent-2">
+                <img src="vertexai.svg" alt="Vertex AI" class="agent-icon">
+                <div class="agent-label">Agent 2</div>
+                <div class="agent-tech">Cloud Run</div>
+            </div>
+            
+            <div class="agent-circle agent-3">
+                <img src="vertexai.svg" alt="Vertex AI" class="agent-icon">
+                <div class="agent-label">Agent 3</div>
+                <div class="agent-tech">Cloud Run</div>
+            </div>
+            
+            <div class="agent-circle agent-4">
+                <img src="vertexai.svg" alt="Vertex AI" class="agent-icon">
+                <div class="agent-label">Agent 4</div>
+                <div class="agent-tech">Cloud Run</div>
+            </div>
+            
+            <div class="agent-circle agent-5">
+                <img src="vertexai.svg" alt="Vertex AI" class="agent-icon">
+                <div class="agent-label">Agent 5</div>
+                <div class="agent-tech">Cloud Run</div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div style="width: 16px; height: 16px; border: 2px solid #4285f4; border-radius: 50%;"></div>
+                <span>Autonomous Agent</span>
+            </div>
+            <div class="legend-item">
+                <div style="width: 16px; height: 16px; background: linear-gradient(135deg, #fbbc04 0%, #ea4335 100%); border-radius: 50%;"></div>
+                <span>Message Bus (Pub/Sub)</span>
+            </div>
+            <div class="legend-item">
+                <div style="width: 12px; height: 12px; background: #4285f4; border-radius: 50%;"></div>
+                <span>Message Flow</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

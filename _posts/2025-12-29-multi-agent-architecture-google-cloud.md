@@ -49,6 +49,11 @@ A production multi-agent system on GCP typically costs $0.15-0.30 per workflow e
 
 The most common pattern uses a supervisor agent coordinating worker agents.
 
+<div style="text-align: center; margin: 30px 0;">
+  <iframe src="/images/blog/multi-agent-gcp/hierarchical-diagram.html" width="100%" height="600px" frameborder="0" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></iframe>
+  <p style="font-size: 13px; color: #5f6368; margin-top: 10px;"><em>Interactive Diagram: Hierarchical Multi-Agent Architecture with Google Cloud Services</em></p>
+</div>
+
 **Architecture Components:**
 
 ```
@@ -116,6 +121,11 @@ class SupervisorAgent:
 
 Agents communicate directly without a central coordinator, ideal for dynamic workflows.
 
+<div style="text-align: center; margin: 30px 0;">
+  <iframe src="/images/blog/multi-agent-gcp/peer-to-peer-diagram.html" width="100%" height="600px" frameborder="0" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></iframe>
+  <p style="font-size: 13px; color: #5f6368; margin-top: 10px;"><em>Interactive Diagram: Peer-to-Peer Multi-Agent Architecture with Pub/Sub Communication</em></p>
+</div>
+
 **Architecture Components:**
 
 ```
@@ -180,6 +190,11 @@ class CollaborativeAgent:
 ### Pattern 3: Pipeline Architecture
 
 Sequential processing where each agent's output becomes the next agent's input.
+
+<div style="text-align: center; margin: 30px 0;">
+  <iframe src="/images/blog/multi-agent-gcp/pipeline-diagram.html" width="100%" height="700px" frameborder="0" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></iframe>
+  <p style="font-size: 13px; color: #5f6368; margin-top: 10px;"><em>Interactive Diagram: Pipeline Multi-Agent Architecture with Cloud Workflows Orchestration</em></p>
+</div>
 
 **Architecture Components:**
 
@@ -450,7 +465,12 @@ class AgentMemory:
 
 Here's a complete architecture for a content generation system with 3 agents:
 
+<div style="text-align: center; margin: 30px 0;">
+  <iframe src="/images/blog/multi-agent-gcp/production-architecture.html" width="100%" height="900px" frameborder="0" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></iframe>
+  <p style="font-size: 13px; color: #5f6368; margin-top: 10px;"><em>Interactive Diagram: Production Multi-Agent System with Complete Service Architecture</em></p>
+</div>
 
+<div style="overflow-x:auto;">
 
 | Component | Service | Purpose | Cost/Month |
 |-----------|---------|---------|------------|
@@ -465,7 +485,7 @@ Here's a complete architecture for a content generation system with 3 agents:
 | AI Models | Vertex AI | Intelligence | $50-150 |
 | **Total** | - | 500 workflows/month | **$145-350** |
 
-
+</div>
 
 **System Flow:**
 
