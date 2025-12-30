@@ -450,7 +450,7 @@ class AgentMemory:
 
 Here's a complete architecture for a content generation system with 3 agents:
 
-<div style="overflow-x:auto;">
+
 
 | Component | Service | Purpose | Cost/Month |
 |-----------|---------|---------|------------|
@@ -465,7 +465,7 @@ Here's a complete architecture for a content generation system with 3 agents:
 | AI Models | Vertex AI | Intelligence | $50-150 |
 | **Total** | - | 500 workflows/month | **$145-350** |
 
-</div>
+
 
 **System Flow:**
 
