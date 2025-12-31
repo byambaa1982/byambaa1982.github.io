@@ -443,7 +443,7 @@ Here's a complete architecture for a content generation system with 3 agents:
   <p style="font-size: 13px; color: #5f6368; margin-top: 10px;"><em>Interactive Diagram: Production Multi-Agent System with Complete Service Architecture</em></p>
 </div>
 
-<div style="overflow-x:auto;">
+
 
 | Component | Service | Purpose | Cost/Month |
 |-----------|---------|---------|------------|
@@ -458,7 +458,7 @@ Here's a complete architecture for a content generation system with 3 agents:
 | AI Models | Vertex AI | Intelligence | $50-150 |
 | **Total** | - | 500 workflows/month | **$145-350** |
 
-</div>
+
 
 **System Flow:**
 
