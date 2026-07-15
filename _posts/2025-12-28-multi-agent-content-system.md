@@ -1,5 +1,5 @@
 ---
-layout: article
+
 title: "Build Your Own AI Content Factory: A Production-Ready Multi-Agent System"
 date: 2025-12-28
 categories: [AI, Content Creation, Google Cloud]

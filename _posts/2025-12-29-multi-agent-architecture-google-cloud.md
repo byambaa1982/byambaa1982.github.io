@@ -1,5 +1,5 @@
 ---
-layout: article
+
 title: "Building Multi-Agent Systems on Google Cloud: A Complete Architecture Guide"
 date: 2025-12-29
 categories: [Google Cloud, AI, Architecture]

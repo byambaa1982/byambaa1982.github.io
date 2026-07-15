@@ -1,0 +1,26 @@
+{%- assign chips = include.post.categories | default: include.post.tags -%}
+{%- if chips.size == 0 -%}{%- assign chips = include.post.tags -%}{%- endif -%}
+{%- assign words = include.post.content | number_of_words -%}
+{%- assign rt = words | divided_by: 200 | plus: 1 -%}
+{%- capture tagdata -%}{% for c in chips %}{{ c | downcase }} {% endfor %}{%- endcapture -%}
+
+<article class="card reveal" data-tags="{{ tagdata | strip }}">
+  <div class="card-glow" aria-hidden="true"></div>
+  <div class="card-top">
+    <time class="card-date" datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%b %-d, %Y" }}</time>
+    <span class="card-dot" aria-hidden="true">·</span>
+    <span class="card-rt">{{ rt }} min read</span>
+  </div>
+
+  <h2 class="card-title">
+    <a href="{{ include.post.url | relative_url }}" class="card-link">{{ include.post.title | escape }}</a>
+  </h2>
+
+  {%- assign summary = include.post.excerpt | strip_html | strip_newlines | truncate: 180 -%}
+  <p class="card-excerpt">{{ summary }}</p>
+
+  <div class="card-tags">
+    {%- for c in chips limit: 4 -%}<span class="chip">{{ c }}</span>{%- endfor -%}
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+</article>

@@ -1,39 +1,46 @@
 ---
-layout: articles
-titles:
-  # @start locale config
-  en      : &EN       Home
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  zh-Hans : &ZH_HANS  主页
-  zh      : *ZH_HANS
-  zh-CN   : *ZH_HANS
-  zh-SG   : *ZH_HANS
-  zh-Hant : &ZH_HANT  主頁
-  zh-TW   : *ZH_HANT
-  zh-HK   : *ZH_HANT
-  ko      : &KO       홈
-  ko-KR   : *KO
-  fr      : &FR       Accueil
-  fr-BE   : *FR
-  fr-CA   : *FR
-  fr-CH   : *FR
-  fr-FR   : *FR
-  fr-LU   : *FR
-  tr      : &TR       Ana Sayfa
-  # @end locale config
-show_title: false
-articles:
-  data_source: paginator.posts
-  article_type: BlogPosting
-  show_cover: false
-  show_excerpt: true
-  show_readmore: true
-  show_info: true
+layout: default
 ---
-{{ content }}
-<script>
-  {%- include scripts/home.js -%}
-</script>
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="kicker">{{ site.author.name }} · Data / AI Engineering</p>
+    <h1 class="hero-title">{{ page.headline | default: site.tagline }}</h1>
+    <p class="hero-sub">{{ page.subhead | default: site.description }}</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#writing">Read the writing</a>
+      <a class="btn btn-ghost" href="{{ '/about/' | relative_url }}">About me</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="writing">
+  <div class="section-head">
+    <h2 class="section-title">Writing</h2>
+    <span class="section-count">{{ site.posts.size }} essays</span>
+  </div>
+
+  <div class="filters" role="search">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="search" id="post-search" placeholder="Search essays…" aria-label="Search essays" autocomplete="off">
+    </div>
+    <div class="chips-filter" id="tag-filter">
+      <button class="chip chip-btn is-active" data-tag="all" type="button">All</button>
+      {%- assign all_tags = "" | split: "" -%}
+      {%- for post in site.posts -%}
+        {%- assign chips = post.categories | default: post.tags -%}
+        {%- for c in chips -%}{%- assign all_tags = all_tags | push: c -%}{%- endfor -%}
+      {%- endfor -%}
+      {%- assign uniq = all_tags | uniq | sort_natural -%}
+      {%- for t in uniq -%}<button class="chip chip-btn" data-tag="{{ t | downcase }}" type="button">{{ t }}</button>{%- endfor -%}
+    </div>
+  </div>
+
+  <div class="card-grid" id="post-list">
+    {%- for post in site.posts -%}
+      {%- include post-card.html post=post -%}
+    {%- endfor -%}
+  </div>
+  <p class="no-results" id="no-results" hidden>No essays match that search.</p>
+</section>

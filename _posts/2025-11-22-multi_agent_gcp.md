@@ -1,5 +1,5 @@
 ---
-layout: article
+
 title: "Building a Production-Ready Multi-Agent AI System on Google Cloud: A Complete Journey"
 date: 2025-11-22
 categories: [AI, Google Cloud, Data Engineering, Architecture]

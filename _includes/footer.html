@@ -1,31 +1,22 @@
-
-<footer class="footer py-4 js-page-footer">
-  <div class="main">
-
-    {%- assign _site_author = site.author -%}
-    {%- if _site_author.type == 'organization' -%}
-      {%- assign _site_author_itemtype = 'http://schema.org/Organization' -%}
-    {%- else -%}
-      {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
-    {%- endif -%}
-
-    <div itemscope itemtype="{{ _site_author_itemtype }}">
-      <meta itemprop="name" content="{{ _site_author.name }}">
-      {%- assign _site_author_url = _site_author.url | default: '/'-%}
-      {%- include snippets/get-nav-url.html path=_site_author_url -%}
-      {%- assign _site_author_url = __return -%}
-      <meta itemprop="url" content="{{ _site_author_url }}">
-      {%- if _site_author.bio -%}
-        <meta itemprop="description" content="{{ _site_author.bio }}">
-      {%- endif -%}
-      <div class="footer__author-links">
-        {%- include author-links.html author=_site_author -%}
-      </div>
-    </div>
-    <div class="site-info mt-2">
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true">◈</span>
       <div>
-        Byamba Enkhbat
+        <p class="footer-title">{{ site.title }}</p>
+        <p class="footer-tag">{{ site.tagline }}</p>
       </div>
     </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      {%- for item in site.nav -%}
+      <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
+      {%- endfor -%}
+      <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>
+      {%- if site.author.twitter -%}<a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener">Twitter</a>{%- endif -%}
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <a href="mailto:{{ site.author.email }}">Email</a>
+    </nav>
   </div>
+  <p class="colophon wrap">© {{ 'now' | date: "%Y" }} {{ site.author.name }} · Built with Jekyll · Designed in the dark.</p>
 </footer>

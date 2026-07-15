@@ -1,6 +1,6 @@
 ---
 title: 5 AI Productivity Tools That Actually Deliver Results in 2025
-tag: AI
+tags: [AI, Productivity]
 ---
 
 We're drowning in AI tools. Every week brings another "revolutionary" platform promising to 10x your productivity. Most are hype. But some actually work.

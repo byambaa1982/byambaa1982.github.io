@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}" data-theme="dark">
+{%- include head.html -%}
+<body>
+  <!-- reading / scroll progress -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ambient layers -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {%- include header.html -%}
+
+  <main id="main" class="page">
+    {{ content }}
+  </main>
+
+  {%- include footer.html -%}
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>

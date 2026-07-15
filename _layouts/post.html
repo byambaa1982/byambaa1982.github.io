@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{%- assign chips = page.categories | default: page.tags -%}
+{%- assign words = content | number_of_words -%}
+{%- assign rt = words | divided_by: 200 | plus: 1 -%}
+
+<article class="post">
+  <header class="post-header wrap-narrow">
+    <a class="back-link" href="{{ '/' | relative_url }}">← All writing</a>
+    <p class="kicker">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      · {{ rt }} min read
+    </p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-tags">
+      {%- for c in chips limit: 6 -%}<span class="chip">{{ c }}</span>{%- endfor -%}
+    </div>
+  </header>
+
+  <div class="post-body wrap-narrow">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer wrap-narrow">
+    <div class="author-card">
+      <div class="author-avatar" aria-hidden="true">BE</div>
+      <div class="author-meta">
+        <p class="author-name">{{ site.author.name }}</p>
+        <p class="author-bio">{{ site.author.bio }}</p>
+        <div class="author-links">
+          <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a>
+          {%- if site.author.twitter -%}<a href="https://twitter.com/{{ site.author.twitter }}" target="_blank" rel="noopener">Twitter</a>{%- endif -%}
+          <a href="mailto:{{ site.author.email }}">Email</a>
+        </div>
+      </div>
+    </div>
+    <a class="back-link" href="{{ '/' | relative_url }}">← All writing</a>
+  </footer>
+</article>
