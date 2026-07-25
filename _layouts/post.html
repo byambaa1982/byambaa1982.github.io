@@ -38,3 +38,15 @@ layout: default
     <a class="back-link" href="{{ '/' | relative_url }}">← All writing</a>
   </footer>
 </article>
+
+{%- if page.mermaid -%}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  const dark = document.documentElement.getAttribute('data-theme') !== 'light';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: dark ? 'dark' : 'neutral',
+    themeVariables: { fontFamily: 'Inter, sans-serif' }
+  });
+</script>
+{%- endif -%}
